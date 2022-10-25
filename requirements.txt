@@ -1,5 +1,5 @@
-pynput==1.7.4
-streamlit==1.1.0
-torch==1.10.0
-transformers==4.12.2
-requests==2.26.0
+pynput==1.7.6
+streamlit==1.11.1
+torch==1.12.1
+transformers==4.23.1
+requests==2.28.1

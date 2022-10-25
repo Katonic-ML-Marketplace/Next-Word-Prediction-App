@@ -22,7 +22,7 @@ st.set_page_config(
 st.sidebar.image('logo.png')
 st.sidebar.write('---')
 
-st.markdown('# **Next word Prediction App **')
+st.subheader('Next word Prediction App')
 st.write("""
 This app **predicts the next word for the given input to make more personalized sentences.!**
 """)
@@ -31,9 +31,6 @@ For the given text like **"how many people"** the next suggested words can be **
 number of words you want.
 """)
 st.write('---')
-
-
-#use joblib to fast your function
 
 def decode(tokenizer, pred_idx, top_clean):
   ignore_tokens = string.punctuation + '[PAD]'

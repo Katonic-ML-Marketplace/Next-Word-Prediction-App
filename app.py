@@ -1,16 +1,11 @@
 from transformers import BertTokenizer, BertForMaskedLM
 import streamlit as st
-from io import BytesIO
 from PIL import Image
 import torch
 import string
-import os
-import sys
-import time
-import requests
 
-response = requests.get(url='https://katonic.ai/favicon.ico')
-im = Image.open(BytesIO(response.content))
+
+im = Image.open('image/favicon.ico')
 
 st.set_page_config(
     page_title='Next word Prediction App', 
@@ -19,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state = 'auto'
 )
 
-st.sidebar.image('logo.png')
+st.sidebar.image('image/logo.png')
 st.sidebar.write('---')
 
 st.subheader('Next word Prediction App')

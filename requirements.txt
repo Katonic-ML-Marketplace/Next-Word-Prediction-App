@@ -2,4 +2,3 @@ pynput==1.7.6
 streamlit==1.11.1
 torch==1.12.1
 transformers==4.23.1
-requests==2.28.1

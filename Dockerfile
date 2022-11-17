@@ -1,7 +1,8 @@
 FROM python:3.8.2-slim
 
 COPY app.py .
-COPY logo.png .
+COPY image/logo.png image/.
+COPY image/favicon.ico image/.
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt

@@ -3,6 +3,8 @@ name: build image
 on:
   push:
     branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 env:
   REGISTRY_SERVER: quay.io
@@ -25,6 +27,8 @@ jobs:
     
     - name: Build the Docker image
       run: |
+        sudo apt-get update -y
+        sudo apt-get install -y libpython3.6-dev
         docker build . --tag "${{ env.REGISTRY_SERVER }}"/"${{ env.REGISTRY_NAMESPACE }}"/"${{ env.REPOSITORY_NAME }}":"${{ env.TAG }}"
       
     - name: Docker Push
